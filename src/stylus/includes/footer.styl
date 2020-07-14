@@ -1,0 +1,85 @@
+.Footer
+	width 100%
+	position relative
+	background light_color
+	text-align center
+	padding 10px 0 40px
+	font-size 14px
+	&_Copy
+		display inline-block
+		padding 0 10px
+		color smoke_color
+		margin-bottom 40px
+		
+
+		&_Item
+			vertical-align middle
+			display inline-block
+			text-align left
+			margin-right 5px
+			&:first-child
+				display block
+				text-align center
+				margin-top 20px
+		&_Link
+			color smoke_color
+			font-weight 700
+			display inline-block
+			
+	.Menu
+		padding 0 10px 0 0
+		text-align center
+		margin 0
+		color smoke_color
+
+		&_item
+			display inline-block
+			margin 0 20px
+				
+			&_link
+				font-weight 700
+				line-height 40px
+				color smoke_color
+		
+
+@media only screen and (min-width : 768px)
+	.Footer
+		text-align left
+		&_Copy
+			&_Item
+				&:first-child
+					display inline-block
+					margin 0
+		
+				
+					
+@media only screen and (min-width : 1100px)
+	.Footer
+		padding 10px 0 40px
+		&_Copy
+			padding 0
+			text-align left
+			width 100%
+			margin-bottom 0
+			&_Link
+				&:hover
+					text-decoration  underline
+					color acent_color
+			
+		.Menu
+			text-align right
+			&_item
+				&:nth-child(3)
+					margin-right 0
+				&_link
+					&:hover
+						text-decoration  underline
+						color acent_color
+						
+
+// @keyframes up-subscribe
+// 	0%
+// 		bottom -100px
+// 	100%
+// 		bottom 0
+

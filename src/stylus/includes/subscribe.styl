@@ -1,0 +1,147 @@
+.Modal
+	position fixed
+	z-index 3000
+	background rgba(acent_color, 0.7)
+	top 0
+	left 0
+	bottom 0
+	right 0
+	display none
+	animation close .3s ease-in-out
+	&::after
+		content ''
+		display block
+		filter blur(10px)
+		// background-image url('../img/bg-blur.png')
+		background-position center
+		background-repeat no-repeat
+		background-size cover
+		height 100%
+		width 100%
+		position absolute
+		z-index -1
+		top 0
+		
+		
+	&.is-open
+		display block
+		animation open .3s ease-in-out
+
+	&-Container
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -230px;
+		margin-left: -200px;
+		position relative
+		width 400px
+		min-height 350px
+		height auto
+		background white_color
+		padding 40px
+		top 50%
+		left 50%
+		border-radius 3px
+		box-shadow 0 10px 40px -6px rgba(acent_color, .4)
+	&-Close
+		position absolute
+		top 0
+		right 0
+		width 40px
+		height 40px
+		display block
+		&:hover
+			opacity 0.6
+	 
+.Subscribe
+	position relative
+	&-Img
+		max-width 80px
+		display block
+		margin 20px auto 30px
+	&-Msg
+		margin 40px auto
+		display block
+		
+/* Estilos para el formulario de mailchimp
+------------------------------------------------------------------------------*/
+.mc_embed_signup
+	width 100%
+	text-align left
+	.content-email 
+		display inline-block
+		width 100%
+	.email,
+	.name
+		border none
+		width 100%
+		background rgba(acent_color, .1)
+		color acent_color
+		line-height 40px
+		outline 0
+		text-indent 10px
+		display inline-block
+		transition_all(.3s)
+		margin 4px 0
+		&:focus,
+		&:hover
+			background rgba(acent_color, .2)
+			border none
+			
+	#mce-EMAIL-error
+		font-weight 600 
+		color red
+		height 30px
+		line-height 30px
+		width 50%
+		display none
+		font-size 12px
+		
+	
+	#resultElement
+		background rgba(acent_color, .2)
+		color red
+		display none
+		font-weight 600
+		padding 20px 40px
+		text-align center
+		width 100%
+		&.is-error
+			color red
+		&.is-success
+			color acent_color
+	
+	.button
+		background acent_color
+		border none
+		border-radius 20px
+		color white_color
+		display inline-block
+		height 40px 
+		line-height 40px
+		margin 10px 0 0
+		outline 0
+		overflow hidden
+		width 100%
+		transition_all(.3s)
+		&:focus,
+		&:hover
+			background rgba(acent_color, .9)
+			shadow_custom(acent_color, 0, 15px, 20px, -9px, .4)
+			transform scale(1.02)
+		
+	
+
+
+@keyframes open 
+	0%
+		opacity 0
+	100%
+		opacity 1
+		
+@keyframes close
+	0%
+		opacity 1
+	100%
+		opacity 0
+		

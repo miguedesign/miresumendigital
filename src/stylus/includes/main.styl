@@ -1,0 +1,192 @@
+.KeyContent
+	background light_color
+	padding 50px 10px
+	.container
+		padding 10px 0
+
+	&__message
+		background rgba(red, .2)
+		border-color rgba(red, .8)
+		color red
+		display inline-block
+		margin 0 auto
+		padding 10px 20px
+		border-radius 6px
+
+.KeyiconsContent
+	width 100%
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: stretch;
+	-webkit-box-align: stretch;
+	align-items: stretch;
+	
+.key
+	text-align center
+	margin  1px auto
+	
+.keyicon 
+	background white_color
+	display block
+	margin 10px 10px 45px
+	position relative
+	shadow_custom(black_color, 0, 1px, 3px, 0px, .1)
+	transition_all(.3s)
+	width 100px
+	height 100px
+	padding 25px 0 
+	outline none
+	border-radius 2px
+		
+	&_name
+		transition_all(.3s)
+		position absolute
+		top -20px
+		font-size 12px
+		font-weight 400
+		color gray_color_3
+		left 0
+		width 100%
+		text-align left
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+		
+	
+	img
+		width 24px
+		margin-top 6px
+		display inline-block
+		
+	&_download
+		background acent_color
+		border-radius 20px
+		bottom 10px
+		padding 5px 10px
+		color white_color
+		font-size 10px
+		line-height 10px
+		font-weight 400
+		height 20px
+		position absolute
+		left 50%
+		transform translateX(-50%)
+		opacity 0
+		transition_all(.3s)
+	&-new
+		opacity 1
+		background rgba(acent_color, .1)
+		color acent_color
+		
+	&.keyicon_new--old
+		display none
+		
+	&.is-clicked
+		.keyicon
+			&_download
+				opacity 1
+	
+@media only screen and (min-width : 601px)
+	.KeyiconsContent
+		grid-template-columns: repeat(4, 1fr);
+
+	.key
+		padding 4px
+	
+
+@media only screen and (min-width : 768px)
+	.KeyContent
+		padding 50px 20px
+		.container
+			padding 0 
+		
+	.keyicon
+		height 110px
+		padding 35px 0 
+		width 110px 
+		margin 15px 16px 30px
+		&:focus
+			shadow_custom(black_color, 0, 10px, 30px, -6px, .1)
+		
+		&:hover
+			shadow_custom(black_color, 0, 15px, 30px, -6px, .2)
+			transform scale(1.1)
+			padding 25px 0 45px
+			.keyicon
+				&_name
+					color black_color
+				&_download
+					opacity 1
+					bottom 15px
+				&-new
+					display none
+				
+					
+		&.is-clicked
+			padding 25px 0 45px
+			.keyicon
+				&_download
+					bottom 15px
+				&-new
+					display none
+
+@media screen and (min-width 900px)
+	.KeyiconsContent
+		grid-template-columns: repeat(5, 1fr);	
+		
+
+@media screen and (min-width 1100px)
+	.KeyContent
+		padding 50px 20px
+		.container
+			padding 0 0
+	.KeyiconsContent
+		grid-template-columns: repeat(6, 1fr);	
+
+@media screen and (min-width 1200px)
+	.KeyiconsContent
+		grid-template-columns: repeat(8, 1fr);	
+
+@media screen and (min-width 1300px)
+	.KeyiconsContent
+		grid-template-columns: repeat(8, 1fr);
+	.key
+		padding 0
+	.keyicon 
+		margin 0 0 50px 0
+	
+@media screen and (min-width 1400px)
+	.KeyContent
+		padding 50px 0
+		.container
+			padding 0 0
+	.KeyiconsContent
+		grid-template-columns: repeat(9, 1fr);
+
+// svg
+// 	width 30px
+// 	height 30px
+// 	stroke-width 0
+// 	color red
+// 	stroke-width 0
+// 	color orange
+// 	stroke-dasharray 1000
+// 	stroke-dashoffset 0
+// 	animation icon-animate-in 8s 1 ease-in-out
+// 	transition all .25s ease-out
+	
+
+
+
+@keyframes icon-animate-hover
+	0%
+		stroke-dashoffset 1000
+	100% 
+		stroke-dashoffset 0
+		
+@keyframes icon-animate-in
+	0%
+		stroke-dashoffset 1000
+	100%
+		stroke-dashoffset 0
+								
