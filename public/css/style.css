@@ -924,13 +924,14 @@ _____________________________________________________ */
 }
 .Hero img.icon {
   width: 30px;
+  margin-bottom: 20px;
 }
 .Hero h1 {
   font-style: normal;
   font-weight: bold;
   font-family: circular-bold;
-  font-size: 72px;
-  line-height: 91px;
+  font-size: 40px;
+  line-height: 48px;
   margin: 0;
 }
 .Hero h2 {
@@ -951,7 +952,7 @@ _____________________________________________________ */
   background: #000;
 }
 .Hero__form {
-  padding: 100px 20px;
+  padding: 60px 20px 100px;
   display: inline-block;
   background-color: #fff;
 }
@@ -1017,5 +1018,9 @@ _____________________________________________________ */
   }
   .Hero__form {
     padding: 100px;
+  }
+  .Hero h1 {
+    font-size: 71px;
+    line-height: 91px;
   }
 }
