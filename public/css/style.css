@@ -268,7 +268,6 @@ table {
 _____________________________________________________ */
 /* Constants
 _____________________________________________________ */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 /* Mixins
 _____________________________________________________ */
 /* Grid
@@ -778,6 +777,28 @@ _____________________________________________________ */
     margin-left: 100.52198999999999%;
   }
 }
+/* Fonts
+_____________________________________________________ */
+@font-face {
+  font-family: circular-book;
+  src: url("../fonts/circular-std-book/CircularStd-Book.svg");
+  src: url("../fonts/circular-std-book/CircularStd-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/circular-std-book/CircularStd-Book.woff") format("woff"), url("../fonts/circular-std-book/CircularStd-Book.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+.font-circular-book {
+  font-family: circular-book;
+}
+@font-face {
+  font-family: circular-bold;
+  src: url("../fonts/circular-std-bold/CircularStd-Bold.svg");
+  src: url("../fonts/circular-std-bold/CircularStd-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/circular-std-bold/CircularStd-Bold.woff") format("woff"), url("../fonts/circular-std-bold/CircularStd-Bold.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+.font-circular-bold {
+  font-family: circular-bold;
+}
 /* Base
 _____________________________________________________ */
 html {
@@ -795,7 +816,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   color: #0c0310;
-  font-family: 'Inter';
+  font-family: circular-book;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
@@ -811,7 +832,7 @@ body {
   transition: all 300ms ease;
   width: 100%;
   text-align: center;
-  background: #fdfbf9;
+  background: #f2f4f5;
 }
 h1,
 h2,
@@ -822,7 +843,7 @@ h6 {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Inter';
+  font-family: circular-book;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -889,4 +910,112 @@ p {
 }
 small {
   font-weight: 300;
+}
+/* MiResume V1
+_____________________________________________________ */
+.Hero {
+  background-color: #e7e6e7;
+  text-align: left;
+  font-family: circular-book;
+}
+.Hero h1,
+.Hero h2 {
+  margin: 0;
+}
+.Hero img.icon {
+  width: 30px;
+}
+.Hero h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-family: circular-bold;
+  font-size: 72px;
+  line-height: 91px;
+  margin: 0;
+}
+.Hero h2 {
+  font-family: circular-bold;
+  margin-top: 40px;
+}
+.Hero p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+.Hero__description {
+  display: inline-block;
+  min-height: 300px;
+  width: 100%;
+  background: #000;
+}
+.Hero__form {
+  padding: 100px 20px;
+  display: inline-block;
+  background-color: #fff;
+}
+.Hero .Form__header,
+.Hero .Form__content {
+  max-width: 400px;
+  display: inline-block;
+}
+.Hero .Form__content {
+  margin-top: 60px;
+}
+.Hero input {
+  width: 100%;
+  line-height: 48px;
+  background: #f2f4f5;
+  border: solid thin #e7e6e7;
+  text-indent: 10px;
+  letter-spacing: -0.5px;
+  outline: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.22, 0.61, 0.3, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.22, 0.61, 0.3, 1);
+  -o-transition: all 0.3s cubic-bezier(0.22, 0.61, 0.3, 1);
+  -ms-transition: all 0.3s cubic-bezier(0.22, 0.61, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.3, 1);
+  margin: 20px 0 30px;
+}
+.Hero input:nth-child(2) {
+  margin-top: 0;
+}
+.Hero input:hover,
+.Hero input:focus {
+  border-color: #0c0310;
+}
+.Hero button {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  border: none;
+  outline: 0;
+  line-height: 60px;
+  font-weight: 600;
+  -webkit-transition: all 0.3s cubic-bezier(0.22, 0.61, 0.3, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.22, 0.61, 0.3, 1);
+  -o-transition: all 0.3s cubic-bezier(0.22, 0.61, 0.3, 1);
+  -ms-transition: all 0.3s cubic-bezier(0.22, 0.61, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.3, 1);
+}
+.Hero button:hover,
+.Hero button:focus {
+  -webkit-box-shadow: 0 0 0 6px rgba(141,149,160,0.3);
+  box-shadow: 0 0 0 6px rgba(141,149,160,0.3);
+}
+@media only screen and (min-width: 910px) {
+  .Hero {
+    display: table;
+  }
+  .Hero__description,
+  .Hero__form {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    height: 100vh;
+  }
+  .Hero__form {
+    padding: 100px;
+  }
 }
